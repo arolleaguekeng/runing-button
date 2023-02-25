@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container input[type=text] {
+  height: 40px;
+  border-radius: 7px;
+  width: 250px;
+  margin: 10px 0px;
+  padding-left: 15px;
+  font-size: 16px;
+}
+.container h1 {
+  font-family: "Century Gothic";
+}
+.container .poulet-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: linear 3s;
+}
+.container .poulet-button .button {
+  border-radius: 7px;
+  height: 50px;
+  width: 250px;
+  padding: 5px;
+  z-index: 999;
+  font-size: 30px;
+  border: none;
+  background-color: rgb(0, 121, 242);
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.container .poulet-button img {
+  width: 180px;
+  height: 80px;
+  margin-top: -80px;
+  transform: scaleX(-1);
+  filter: sepia(100%) hue-rotate(190deg) saturate(900%);
+  display: none;
+}
+.container #btnControl:checked ~ label {
+  margin-left: 500px;
+  transition: linear 3s;
+}
+.container #btnControl:checked ~ label > img {
+  display: block;
+}
+.container .cb {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
