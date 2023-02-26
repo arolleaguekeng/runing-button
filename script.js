@@ -92,11 +92,15 @@ function showNextStape() {
             // set password input border
             password.style.border = "2px solid red";
 
+            // Set button to red
+            pbutton.style.backgroundColor = 'red';
+
             // make the button visible again
             pouletButton.style.opacity = 1;
 
             // return the button to its original position
             pouletButton.style.marginLeft = '0';
+            pouletButton.style.backgroundColor=red;
 
             // change filter color of image and set it red 
             redpoulet = `-webkit-filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(400%) contrast(2);
@@ -106,6 +110,7 @@ function showNextStape() {
 
             // show poulet animation
             pouletgif.style.display = "flex";
+            
             // Hide static poulet
             pouletpng.style.display = "none";
 
