@@ -25,10 +25,10 @@ window.addEventListener('load', (event) => {
 //check email
 email.addEventListener('change',(event)=>{
     if(validateEmail(email.value)){
-        email.style.border = "1px solid green"
+        email.style.border = "2px solid green"
     }
     else{
-        email.style.border = "1px solid red"
+        email.style.border = "2px solid red"
     }
 })
 // hide stape 1 and show stape 2
