@@ -6,13 +6,8 @@
     justify-content: center;
     flex-direction: column;
     transition: linear 2s ;
-
-    p{
-        margin:0;
-        text-align: left;
-    }
     
-    
+    // Submit button design for second page
     button{
         padding: 5px;
         width: 200px;
@@ -27,11 +22,13 @@
         font-weight: 700;
         color: rgb(0, 113, 242);
         }
+    // image for second page
     img{
-        width: 30%;
+        width: 320px;
     }
 
-    
+
+    // From inputs password and email style
     input[type=password],input[type=email]{
         height: 40px;
         border-radius: 7px;
@@ -45,10 +42,12 @@
             
         }
     }
-    
+    // Set default police of all page
     *{
         font-family: 'Century Gothic';
     }
+
+    // button container style
     .poulet-button {
         display: flex;
         flex-direction: column;
@@ -58,6 +57,8 @@
         .pouletgif{
             display:none;
         }
+
+        // on hover on button, show animate poulet
         &:hover .pouletpng{
             display:none;
         }
@@ -65,7 +66,7 @@
             display: flex;
         }
         
-    
+        // Submit button design
         .button {
             border-radius: 7px;
             height: 50px;
@@ -85,7 +86,7 @@
                 cursor: pointer;
             }
         }
-    
+        // Poulet image positioned to do run effect
         img {
             width: 120px;
             height: 85px;
@@ -97,6 +98,7 @@
         }
     }  
 }
+//footer style
 footer{
     position: fixed;
     color: gray;
