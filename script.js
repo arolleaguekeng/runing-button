@@ -9,9 +9,15 @@ let stape1 = document.getElementById("stape1");
 let stape2 = document.getElementById("stape2");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
-let pouletButton = document.getElementById('poulet-button');
-let pouletImage = document.getElementById('poulet');
+
 let pbutton = document.getElementById('pbutton');
+let pouletButton = document.getElementById('poulet-button');
+
+let pouletgif = document.getElementById('pouletgif');
+let pouletpng = document.getElementById('pouletpng');
+
+
+
 
 
 pbutton.addEventListener('click',(event)=>{
@@ -36,7 +42,8 @@ function showNextStape(){
     pouletButton.style.marginLeft = "50%" ;
     pouletButton.style.transition = "linear 2s" ;
     pouletButton.style.opacity = 0 ;
-    pouletImage.style.display = "flex";
+    pouletpng.style.display = "none";
+    pouletgif.style.display = "flex";
     setTimeout(() => {
         
         if(validateEmail(email.value) && password.value == "pharaon valley"){
@@ -57,11 +64,22 @@ function showNextStape(){
             pbutton.style.backgroundColor = 'red';
             pouletButton.style.opacity = 1;
             pouletButton.style.marginLeft = '0';
-            pouletImage.style.display = "flex";
-            pouletImage.style = `-webkit-filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(400%) contrast(2);
-            filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);`;
+            redpoulet = `-webkit-filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(400%) contrast(2);
+            filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);`
+            pouletgif.style = redpoulet;
+            pouletpng.style = redpoulet;
+            pouletgif.style.display = "flex";
+            pouletpng.style.display = "none";
+            
+            
+            setTimeout(() => {
+                pouletpng.style.display = "flex";
+                pouletgif.style.display = "none";
+            },700)
         }
-      }, 900)
+        
+      }, 900);
+      
 }
 
   

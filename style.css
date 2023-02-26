@@ -50,6 +50,15 @@
   align-items: center;
   transition: linear 3s;
 }
+.container .poulet-button .pouletgif {
+  display: none;
+}
+.container .poulet-button:hover .pouletpng {
+  display: none;
+}
+.container .poulet-button:hover .pouletgif {
+  display: flex;
+}
 .container .poulet-button .button {
   border-radius: 7px;
   height: 50px;
@@ -75,7 +84,7 @@
   margin-top: -52px;
   transform: scaleX(-1);
   filter: sepia(100%) hue-rotate(190deg) saturate(900%);
-  display: none;
+  display: flex;
   transition: linear 0.5s;
 }
 
