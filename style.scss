@@ -1,71 +1,115 @@
-.container{
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Urbanist;
+}
+
+.container {
     display: flex;
     height: 80vh;
     text-align: center;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    transition: linear 2s ;
-    
-    // Submit button design for second page
-    button{
-        padding: 5px;
-        width: 200px;
-        height: 60px;
-        background-color: transparent;
-        border-radius: 30px;
-        font-size: 20px;
-        background-color: #ffffff91;
-        margin-top: 20px;
-        border: 1px solid rgb(0, 113, 242);
-        cursor: pointer;
-        font-weight: 700;
-        color: rgb(0, 113, 242);
-        }
-    // image for second page
-    img{
-        width: 320px;
-    }
+    transition: linear .3s;
 
-
-    // From inputs password and email style
-    input[type=password],input[type=email]{
-        height: 40px;
+    button {
         border-radius: 7px;
-        width: 250px;
-        margin: 10px 0px;
-        padding-left: 15px;
-        font-size: 16px;
-        border: .5px solid grey;
-        &:focus{
-            border-color: blue;
-            
+        height: 50px;
+        width: 170px;
+        padding: 5px;
+        z-index: 999;
+        font-size: 20px;
+        border: none;
+        background-color: #0f2364;
+        display: flex;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
+
+        &:hover {
+            cursor: pointer;
         }
     }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+
+        // Submit button design for second page
+        button {
+            padding: 5px;
+            width: 200px;
+            height: 60px;
+            background-color: transparent;
+            border-radius: 30px;
+            font-size: 20px;
+            background-color: #ffffff91;
+            margin-top: 20px;
+            border: 1px solid #0f2364;
+            cursor: pointer;
+            font-weight: 700;
+            color: #0f2364;
+        }
+
+        // image for second page
+        img {
+            width: 320px;
+        }
+
+
+        // From inputs password and email style
+        input[type=password],
+        input[type=email] {
+            height: 40px;
+            border-radius: 7px;
+            width: 300px;
+            margin: 10px 0px;
+            padding-left: 15px;
+            font-size: 16px;
+            border: .5px solid grey;
+
+            &:focus {
+                border-color: #0f2364;
+
+            }
+        }
+    }
+
     // Set default police of all page
-    *{
-        font-family: 'Century Gothic';
+    * {
+        font-family: 'Urbanist';
     }
 
     // button container style
     .poulet-button {
         display: flex;
+        width: 100%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transition: linear 3s ;
-        .pouletgif{
-            display:none;
+        transition: linear 3s;
+
+        .pouletgif {
+            display: none;
         }
 
         // on hover on button, show animate poulet
-        &:hover .pouletpng{
-            display:none;
+        &:hover .pouletpng {
+            display: none;
         }
+
         &:hover .pouletgif {
             display: flex;
         }
-        
+
         // Submit button design
         .button {
             border-radius: 7px;
@@ -75,38 +119,39 @@
             z-index: 999;
             font-size: 20px;
             border: none;
-            background-color: rgb(0, 121, 242);
+            background-color: #0f2364;
             display: flex;
             color: white;
             justify-content: center;
             align-items: center;
             text-align: center;
             margin-top: 20px;
+
             &:hover {
                 cursor: pointer;
             }
         }
+
         // Poulet image positioned to do run effect
         img {
             width: 120px;
             height: 85px;
             margin-top: -52px;
             transform: scaleX(-1);
-            filter: sepia(100%) hue-rotate(190deg) saturate(900%);
+            filter: sepia(5%) hue-rotate(200deg) saturate(600%);
             display: flex;
-            transition: linear .5s ;
+            transition: linear .5s;
         }
-    }  
+    }
 }
+
 //footer style
-footer{
+footer {
     position: fixed;
+    bottom: 0;
     color: gray;
     bottom: 20vh;
     border-bottom: .2px solid rgba(128, 128, 128, 0.205);
     padding: 5px 20px;
-    
+
 }
-
-
-

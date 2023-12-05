@@ -71,7 +71,7 @@ function showNextStape() {
     // Wait .8s for the animation to finish before checking the form.
     setTimeout(() => {
         //check form if email and password is correct
-        if (validateEmail(email.value) && password.value == "admin") {
+        if (validateEmail(email.value) && password.value === "admin") {
             // Hide current cotnainer
             stape1.style.display = 'none';
             // Show second container
@@ -93,24 +93,24 @@ function showNextStape() {
             password.style.border = "2px solid red";
 
             // Set button to red
-            pbutton.style.backgroundColor = 'red';
+            pbutton.style.backgroundColor = '#ef573d';
 
             // make the button visible again
             pouletButton.style.opacity = 1;
 
             // return the button to its original position
             pouletButton.style.marginLeft = '0';
-            
 
             // change filter color of image and set it red 
             redpoulet = `-webkit-filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(400%) contrast(2);
-            filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);`;
+filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+`;
             pouletgif.style = redpoulet;
             pouletpng.style = redpoulet;
 
             // show poulet animation
             pouletgif.style.display = "flex";
-            
+
             // Hide static poulet
             pouletpng.style.display = "none";
 
